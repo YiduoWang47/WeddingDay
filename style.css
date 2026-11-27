@@ -113,6 +113,38 @@ h1, h2, h3, .sidebar-title {
 .hero p { margin: 8px 0 0; color: var(--stone); font-size: 20px; }
 .hero .hero-date { color: var(--rose); font-weight: 500; }
 
+.countdown {
+    display: flex;
+    gap: clamp(16px, 3vw, 36px);
+    margin-top: 32px;
+}
+.countdown[hidden] { display: none; }   /* display:flex would otherwise override "hidden" */
+
+.cd-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cd-unit span {
+    font-size: clamp(36px, 6vw, 64px);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;  /* every digit the same width, so the numbers don't wobble as they tick */
+}
+
+.cd-unit small {
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--stone);
+}
+
+/* ".hero" in front makes this win over the general ".hero p" rule */
+.hero .countdown-done {
+    font-family: var(--script);
+    font-size: 44px;
+    color: var(--rose);
+}
+
 section {
     max-width: 760px;
     padding: 72px 8vw;
@@ -168,7 +200,7 @@ details p { margin: 10px 0 0; color: var(--stone); }
 }
 
 /* Wide screens: bigger photos, sitting in the empty margin to the right of the text */
-@media (min-width: 1200px) {
+@media (min-width: 801px) {
     .floater { width: clamp(140px, 14vw, 260px); padding: 8px; }
     .floater-1 { right: 15vw; }
     .floater-2 { right: 20vw; }
@@ -208,18 +240,10 @@ details p { margin: 10px 0 0; color: var(--stone); }
         top: 20px;
         left: calc(var(--sidebar-w) + 20px);
     }
-    .corner-tl {
+    .corner-br {
         bottom: 5vh;
     }
 }
-
-/* Wide screens: bigger photos */
-@media (min-width: 1200px) {
-    .corner-tl,
-    .corner-br { --png-w: 35vw; }
-}
-
-
 
 /* ---------- Mobile: sidebar slides out from the left ---------- */
 
