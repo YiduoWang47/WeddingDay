@@ -145,8 +145,33 @@ details p { margin: 10px 0 0; color: var(--stone); }
     z-index: 5;                /* above the content, below the sidebar */
 }
 
+.floater {
+    position: absolute;
+    right: 12px;
+    width: 84px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    padding: 5px;
+    background: #fff;
+}
+.floater-1 { top: 14vh; right: 36px; transform: rotate(4deg); }
+.floater-2 { bottom: 10vh; right: 36px; transform: rotate(-3deg); }
+
+/* Wide screens: bigger photos, sitting in the empty margin to the right of the text */
+@media (min-width: 1200px) {
+    .floater { width: clamp(140px, 14vw, 260px); padding: 8px; }
+    .floater-1 { right: 8vw; }
+    .floater-2 { right: 11vw; }
+}
+
 .corner {
     position: absolute;
+}
+
+.floater-tf,
+.floater-br {
+    --png-w: 38vw;             /* phones */
+    width: var(--png-w);
 }
 
 /* Top left: no rotation. On mobile it sits beside the menu button */
@@ -165,6 +190,9 @@ details p { margin: 10px 0 0; color: var(--stone); }
 
 /* Computer: the sidebar is visible, so start the top-left photo just beyond it */
 @media (min-width: 801px) {
+    .floater-tf,
+    .floater-br { --png-w: 20vw; }
+    
     .floater-tf {
         top: 20px;
         left: calc(var(--sidebar-w) + 20px);
@@ -174,28 +202,13 @@ details p { margin: 10px 0 0; color: var(--stone); }
 /* Wide screens: bigger photos */
 @media (min-width: 1200px) {
     .corner { width: clamp(140px, 14vw, 260px); padding: 8px; }
+    .floater-tf,
+    .floater-br { --png-w: 22vw; }
+    
     .floater-br { right: 3vw; }
 }
 
 
-.floater {
-    position: absolute;
-    right: 12px;
-    width: 84px;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-    padding: 5px;
-    background: #fff;
-}
-.floater-1 { top: 14vh; transform: rotate(4deg); }
-.floater-2 { bottom: 10vh; transform: rotate(-3deg); }
-
-/* Wide screens: bigger photos, sitting in the empty margin to the right of the text */
-@media (min-width: 1200px) {
-    .floater { width: clamp(140px, 14vw, 260px); padding: 8px; }
-    .floater-1 { right: 3vw; }
-    .floater-2 { right: 6vw; }
-}
 
 /* ---------- Mobile: sidebar slides out from the left ---------- */
 
