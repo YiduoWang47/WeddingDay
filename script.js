@@ -94,8 +94,8 @@ tick();
 
     function update() {
         let mode = "phone portrait";
+        if (landscapePhone.matches) mode = "phone landscape"; 
         if (computer.matches) mode = "computer";
-        if (landscapePhone.matches) mode = "phone landscape";   // wins, like it would in CSS
 
         const orientation = window.innerHeight >= window.innerWidth ? "portrait" : "landscape";
         badge.textContent =
