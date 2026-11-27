@@ -1,0 +1,225 @@
+/* Bickham Script Pro is a commercial font, so the file isn't included.
+   Put your licensed web font files in a /fonts folder (see the names below).
+   If you use Adobe Fonts instead, add its <link> in index.html and delete this block. */
+@font-face {
+    font-family: "Bickham Script Pro";
+    src: url("fonts/BickhamScriptProRegular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* If you also have a bolder cut, add another block with the same
+   font-family name but its own file and weight: */
+@font-face {
+    font-family: "Bickham Script Pro";
+    src: url("fonts/BickhamScriptProBold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Bickham Script Pro";
+    src: url("fonts/BickhamScriptProSemibold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --script: "Bickham Script Pro", "bickham-script-pro", "Great Vibes", cursive;
+    --forest: #243B2F;
+    --mist: #EEF1EC;
+    --rose: #B5707C;
+    --stone: #5E6D63;
+    --sidebar-w: 260px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    background: var(--mist);
+    color: var(--forest);
+    font-family: "Jost", system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+h1, h2, h3, .sidebar-title {
+    font-family: var(--script);
+    font-weight: 400;
+    line-height: 1.3;          /* script ascenders and descenders need room */
+}
+
+:focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; }
+
+
+/* ---------- Sidebar (desktop: fixed, never scrolls with the page) ---------- */
+
+.sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: var(--sidebar-w);
+    display: flex;
+    flex-direction: column;
+    padding: 40px 28px;
+    background: var(--forest);
+    color: var(--mist);
+    overflow-y: auto;
+    z-index: 20;
+}
+
+.sidebar-title { font-size: 38px; margin: 0 0 40px; }
+
+.sidebar ul { list-style: none; margin: 0; padding: 0; }
+
+.sidebar a {
+    display: block;
+    padding: 9px 0;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(238, 241, 236, 0.15);
+    transition: color 0.2s;
+}
+
+.sidebar a:hover,
+.sidebar a.active { color: #E6B7BF; }
+
+.sidebar .back-to-top {
+    margin-top: auto;      /* pins it to the bottom of the sidebar */
+    border-bottom: none;
+    border-top: 1px solid rgba(238, 241, 236, 0.3);
+    padding-top: 16px;
+}
+
+
+/* ---------- Main content ---------- */
+
+.main { margin-left: var(--sidebar-w); }
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 8vw;
+}
+
+.hero h1 { font-size: clamp(60px, 10vw, 120px); margin: 0; }
+.hero p { margin: 8px 0 0; color: var(--stone); font-size: 20px; }
+.hero .hero-date { color: var(--rose); font-weight: 500; }
+
+section {
+    max-width: 760px;
+    padding: 72px 8vw;
+    scroll-margin-top: 0;
+}
+
+h2 { font-size: 56px; margin: 0 0 24px; }
+h3 { font-size: 34px; margin: 36px 0 4px; color: var(--rose); }
+
+.map {
+    display: block;
+    width: 100%;
+    height: 340px;
+    margin-top: 12px;
+    border: 0;
+    border-radius: 4px;
+}
+
+details { border-bottom: 1px solid rgba(36, 59, 47, 0.2); padding: 14px 0; }
+summary { cursor: pointer; font-weight: 500; }
+details p { margin: 10px 0 0; color: var(--stone); }
+
+
+/* ---------- Floating photos (fixed: they don't move when scrolling) ---------- */
+
+.floaters {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;      /* never blocks taps or clicks on the page */
+    z-index: 5;                /* above the content, below the sidebar */
+}
+
+.floater {
+    position: absolute;
+    right: 12px;
+    width: 84px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    padding: 5px;
+    background: #fff;
+}
+.floater-tf { top: 14vh; transform: rotate(4deg); }
+.floater-br { bottom: 10vh; transform: rotate(-3deg); }
+
+/* Wide screens: bigger photos, sitting in the empty margin to the right of the text */
+@media (min-width: 1200px) {
+    .floater { width: clamp(140px, 14vw, 260px); padding: 8px; }
+    .floater-tf { right: 3vw; }
+    .floater-br { right: 6vw; }
+}
+
+
+/* ---------- Mobile: sidebar slides out from the left ---------- */
+
+.nav-toggle { display: none; }
+
+@media (max-width: 800px) {
+    .main { margin-left: 0; }
+    section { scroll-margin-top: 64px; padding: 56px 24px; }
+    .hero { padding: 0 24px; }
+    h2 { font-size: 46px; }
+
+    .sidebar {
+        width: min(280px, 80vw);
+        transform: translateX(-100%);
+        visibility: hidden;                      /* keeps hidden links out of tab order */
+        transition: transform 0.3s ease, visibility 0s linear 0.3s;
+        padding-top: 80px;                       /* clears the toggle button */
+    }
+    .sidebar.open {
+        transform: none;
+        visibility: visible;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-toggle {
+        display: block;
+        position: fixed;
+        top: 14px;
+        left: 14px;
+        width: 44px;
+        height: 44px;
+        border: 0;
+        border-radius: 50%;
+        background: var(--forest);
+        cursor: pointer;
+        z-index: 30;                             /* above the sidebar so it can close it */
+    }
+    .nav-toggle span {
+        position: absolute;
+        left: 12px;
+        width: 20px;
+        height: 2px;
+        background: var(--mist);
+        transition: transform 0.3s ease, opacity 0.2s;
+    }
+    .nav-toggle span:nth-child(1) { top: 14px; }
+    .nav-toggle span:nth-child(2) { top: 21px; }
+    .nav-toggle span:nth-child(3) { top: 28px; }
+
+    /* Three lines -> cross */
+    .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .sidebar, .nav-toggle span { transition: none; }
+}

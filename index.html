@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Mobile only: opens/closes the sidebar. Three lines turn into a cross. -->
+    <button type="button" id="nav-toggle" class="nav-toggle"
+            aria-label="Open menu" aria-expanded="false" aria-controls="sidebar">
+        <span></span><span></span><span></span>
+    </button>
+
+    <!-- Always visible on desktop; slides in from the left on mobile -->
+    <aside id="sidebar" class="sidebar">
+        <p class="sidebar-title">[Name] &amp; [Name]</p>
+
+        <nav>
+            <ul>
+                <li><a href="#journey">Our Journey</a></li>
+                <li><a href="#date">Date and Time</a></li>
+                <li><a href="#maps">Maps and Travel</a></li>
+                <li><a href="#dress">Dress Code</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+
+        <a href="#top" class="back-to-top">Back to Top</a>
+    </aside>
+
+    <main id="top" class="main">
+
+        <header class="hero">
+            <h1>[Name] &amp; [Name]</h1>
+            <p>are getting married</p>
+            <p class="hero-date">[Day, Month Year]</p>
+        </header>
+
+        <section id="journey">
+            <h2>Our Journey</h2>
+            <p>[Replace this with how you two met and the story that led here.]</p>
+        </section>
+
+        <section id="date">
+            <h2>Date and Time</h2>
+            <p><strong>Ceremony</strong><br>[Day, Month Year] at [Time]</p>
+            <p><strong>Reception</strong><br>[Day, Month Year] from [Time] until [Time]</p>
+        </section>
+
+        <section id="maps">
+            <h2>Maps and Travel</h2>
+
+            <h3>Ceremony: [Venue name]</h3>
+            <p>[Address, parking and transport notes.]</p>
+            <!-- To change the pin, replace the text after q= with your venue's name or address (use + for spaces). -->
+            <iframe class="map" title="Map of the ceremony venue" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps?q=Sydney+Opera+House&output=embed"></iframe>
+
+            <h3>Reception: [Venue name]</h3>
+            <p>[Address, parking and transport notes.]</p>
+            <iframe class="map" title="Map of the reception venue" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps?q=Royal+Botanic+Garden+Sydney&output=embed"></iframe>
+        </section>
+
+        <section id="dress">
+            <h2>Dress Code</h2>
+            <p>[e.g. Semi-formal. Describe what to wear, and any colours to avoid.]</p>
+        </section>
+
+        <section id="faq">
+            <h2>FAQ</h2>
+            <details>
+                <summary>Can I bring a plus-one?</summary>
+                <p>[Your answer.]</p>
+            </details>
+            <details>
+                <summary>Are children welcome?</summary>
+                <p>[Your answer.]</p>
+            </details>
+            <details>
+                <summary>What if I have dietary requirements?</summary>
+                <p>[Your answer.]</p>
+            </details>
+        </section>
+
+    </main>
+
+    <!-- Decorative photos, fixed in place while the page scrolls.
+         Add your own images to an /images folder with these names. -->
+    <div class="floaters" aria-hidden="true">
+        <img class="floater floater-tf" src="images/floral_tf.png" alt="">
+        <img class="floater floater-br" src="images/floral_br.png" alt="">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
