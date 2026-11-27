@@ -145,6 +145,7 @@ details p { margin: 10px 0 0; color: var(--stone); }
     z-index: 5;                /* above the content, below the sidebar */
 }
 
+/* polaroid-like floaters */
 .floater {
     position: absolute;
     right: 12px;
@@ -164,6 +165,7 @@ details p { margin: 10px 0 0; color: var(--stone); }
     .floater-2 { right: 15vw; }
 }
 
+/* floral corners */
 .corner {
     position: absolute;
 }
@@ -181,7 +183,7 @@ details p { margin: 10px 0 0; color: var(--stone); }
     transform: none;
 }
 
-/* Bottom right (unchanged, still tilted) */
+/* Bottom right: no rotation. On mobile it sits at the bottom right corner of the frame */
 .floater-br {
     right: 12px;
     bottom: 10vh;
@@ -201,7 +203,7 @@ details p { margin: 10px 0 0; color: var(--stone); }
 
 /* Wide screens: bigger photos */
 @media (min-width: 1200px) {
-    .corner { width: clamp(140px, 14vw, 260px); padding: 8px; }
+    .corner { width: clamp(140px, 14vw, 400px); padding: 8px; }
     .floater-tl,
     .floater-br { --png-w: 50vw; }
     
