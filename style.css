@@ -194,7 +194,7 @@ details p { margin: 10px 0 0; color: var(--stone); }
     transform: rotate(4deg); 
 }
 .floater-2 {
-    bottom: 5vh; 
+    bottom: 15vh; 
     right: 36px; 
     transform: rotate(-3deg); 
 }
@@ -202,8 +202,14 @@ details p { margin: 10px 0 0; color: var(--stone); }
 /* Wide screens: bigger photos, sitting in the empty margin to the right of the text */
 @media (min-width: 801px) {
     .floater { width: clamp(140px, 14vw, 260px); padding: 8px; }
-    .floater-1 { right: 15vw; }
-    .floater-2 { right: 20vw; }
+    
+    .floater-1 { 
+        right: 20vw; 
+    }
+    .floater-2 { 
+        bottom: 5vh; 
+        right: 25vw; 
+    }
 }
 
 /* floral corners */
@@ -234,7 +240,7 @@ details p { margin: 10px 0 0; color: var(--stone); }
 /* Computer: the sidebar is visible, so start the top-left photo just beyond it */
 @media (min-width: 801px) {
     .corner-tl,
-    .corner-br { --png-w: 35vw; }
+    .corner-br { --png-w: 25vw; }
     
     .corner-tl {
         top: 20px;
