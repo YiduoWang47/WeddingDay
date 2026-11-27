@@ -202,7 +202,7 @@ details p { margin: 10px 0 0; color: var(--stone); }
 /* Computer: the sidebar is visible, so start the top-left photo just beyond it */
 @media (min-width: 801px) {
     .corner-tl,
-    .corner-br { --png-w: 38vw; }
+    .corner-br { --png-w: 35vw; }
     
     .corner-tl {
         top: 20px;
@@ -216,7 +216,7 @@ details p { margin: 10px 0 0; color: var(--stone); }
 /* Wide screens: bigger photos */
 @media (min-width: 1200px) {
     .corner-tl,
-    .corner-br { --png-w: 50vw; }
+    .corner-br { --png-w: 35vw; }
 }
 
 
