@@ -37,6 +37,7 @@
     --burgundy: rgb(75, 13, 36);
     --gold: rgb(247, 204, 131);
     --sidebar-w: 260px;
+    --jump-gap: 30px;
 }
 
 * { box-sizing: border-box; }
@@ -151,7 +152,7 @@ h1, h2, .sidebar-title {
 section {
     max-width: 760px;
     padding: 72px 8vw;
-    scroll-margin-top: 0;
+    scroll-margin-top: var(--jump-gap);
 }
 
 h2 { font-size: 56px; margin: 0 0 24px; }
@@ -216,7 +217,7 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
         right: 20vw; 
     }
     .floater-2 { 
-        bottom: 5vh; 
+        bottom: 15vh; 
         right: 25vw; 
     }
 }
