@@ -186,7 +186,7 @@ details p { margin: 10px 0 0; color: var(--stone); }
 /* Bottom right: no rotation. On mobile it sits at the bottom right corner of the frame */
 .floater-br {
     right: 12px;
-    bottom: 10vh;
+    bottom: 5vh;
     transform: none;
 }
 
@@ -199,11 +199,14 @@ details p { margin: 10px 0 0; color: var(--stone); }
         top: 20px;
         left: calc(var(--sidebar-w) + 20px);
     }
+    .floater-tl {
+        bottom: 10vh;
+    }
 }
 
 /* Wide screens: bigger photos */
 @media (min-width: 1200px) {
-    .corner { width: clamp(140px, 14vw, 400px); padding: 8px; }
+    /*.corner { width: clamp(140px, 14vw, 400px); padding: 8px; }*/
     .floater-tl,
     .floater-br { --png-w: 50vw; }
     
