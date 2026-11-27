@@ -46,7 +46,7 @@ html { scroll-behavior: smooth; }
 body {
     margin: 0;
     background: var(--pinkmist);
-    color: var(--gold);
+    color: var(--burgundy);
     font-family: "Jost", system-ui, sans-serif;
     font-size: 17px;
     line-height: 1.7;
@@ -71,7 +71,7 @@ h1, h2, .sidebar-title {
     flex-direction: column;
     padding: 40px 28px;
     background: var(--burgundy);
-    color: var(--pinkmist);
+    color: var(--gold);
     overflow-y: auto;
     z-index: 20;
 }
@@ -114,7 +114,7 @@ h1, h2, .sidebar-title {
 
 .hero h1 { font-size: clamp(60px, 10vw, 120px); margin: 0; }
 .hero p { margin: 8px 0 0; color: var(--stone); font-size: 20px; }
-.hero .hero-date { color: var(--gold); font-weight: 500; }
+.hero .hero-date { color: var(--burgundy); font-weight: 500; }
 
 .countdown {
     display: flex;
@@ -302,7 +302,7 @@ details p { margin: 10px 0 0; color: var(--stone); }
         left: 12px;
         width: 20px;
         height: 2px;
-        background: var(--pinkmist);
+        background: var(--gold);
         transition: transform 0.3s ease, opacity 0.2s;
     }
     .nav-toggle span:nth-child(1) { top: 14px; }
