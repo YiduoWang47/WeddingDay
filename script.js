@@ -36,7 +36,7 @@ sections.forEach((s) => observer.observe(s));
 // The moment the ceremony starts. The part after the time is the UTC offset
 // where the wedding is held: +10:00 for Sydney standard time, +11:00 for
 // Sydney daylight saving (roughly October to April).
-const WEDDING_TIME = new Date("2027-06-12T15:00:00+10:00");   // placeholder, change me
+const WEDDING_TIME = new Date("2027-02-20T14:20:00+11:00");   // placeholder, change me
 
 const countdownEl = document.getElementById("countdown");
 const countdownDoneEl = document.getElementById("countdown-done");
