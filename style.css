@@ -154,14 +154,14 @@ details p { margin: 10px 0 0; color: var(--stone); }
     padding: 5px;
     background: #fff;
 }
-.floater-1 { top: 14vh; right: 60px; transform: rotate(4deg); }
-.floater-2 { bottom: 10vh; right: 60px; transform: rotate(-3deg); }
+.floater-1 { top: 14vh; right: 36px; transform: rotate(4deg); }
+.floater-2 { bottom: 10vh; right: 36px; transform: rotate(-3deg); }
 
 /* Wide screens: bigger photos, sitting in the empty margin to the right of the text */
 @media (min-width: 1200px) {
     .floater { width: clamp(140px, 14vw, 260px); padding: 8px; }
-    .floater-1 { right: 8vw; }
-    .floater-2 { right: 11vw; }
+    .floater-1 { right: 12vw; }
+    .floater-2 { right: 15vw; }
 }
 
 .corner {
