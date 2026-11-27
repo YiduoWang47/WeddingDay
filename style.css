@@ -155,14 +155,23 @@ details p { margin: 10px 0 0; color: var(--stone); }
     padding: 5px;
     background: #fff;
 }
-.floater-1 { top: 14vh; right: 36px; transform: rotate(4deg); }
-.floater-2 { bottom: 10vh; right: 36px; transform: rotate(-3deg); }
+
+.floater-1 { 
+    top: 14vh; 
+    right: 36px; 
+    transform: rotate(4deg); 
+}
+.floater-2 {
+    bottom: 5vh; 
+    right: 36px; 
+    transform: rotate(-3deg); 
+}
 
 /* Wide screens: bigger photos, sitting in the empty margin to the right of the text */
 @media (min-width: 1200px) {
     .floater { width: clamp(140px, 14vw, 260px); padding: 8px; }
-    .floater-1 { right: 12vw; }
-    .floater-2 { right: 15vw; }
+    .floater-1 { right: 15vw; }
+    .floater-2 { right: 20vw; }
 }
 
 /* floral corners */
@@ -170,21 +179,21 @@ details p { margin: 10px 0 0; color: var(--stone); }
     position: absolute;
 }
 
-.floater-tl,
-.floater-br {
+.corner-tl,
+.corner-br {
     --png-w: 38vw;             /* phones */
     width: var(--png-w);
 }
 
 /* Top left: no rotation. On mobile it sits beside the menu button */
-.floater-tl {
+.corner-tl {
     top: 14px;
     left: 70px;
     transform: none;
 }
 
 /* Bottom right: no rotation. On mobile it sits at the bottom right corner of the frame */
-.floater-br {
+.corner-br {
     right: 12px;
     bottom: 5vh;
     transform: none;
@@ -192,25 +201,22 @@ details p { margin: 10px 0 0; color: var(--stone); }
 
 /* Computer: the sidebar is visible, so start the top-left photo just beyond it */
 @media (min-width: 801px) {
-    .floater-tl,
-    .floater-br { --png-w: 50vw; }
+    .corner-tl,
+    .corner-br { --png-w: 38vw; }
     
-    .floater-tl {
+    .corner-tl {
         top: 20px;
         left: calc(var(--sidebar-w) + 20px);
     }
-    .floater-tl {
+    .corner-tl {
         bottom: 5vh;
     }
 }
 
 /* Wide screens: bigger photos */
 @media (min-width: 1200px) {
-    /*.corner { width: clamp(140px, 14vw, 400px); padding: 8px; }*/
-    .floater-tl,
-    .floater-br { --png-w: 50vw; }
-    
-    .floater-br { right: 3vw; }
+    .corner-tl,
+    .corner-br { --png-w: 50vw; }
 }
 
 
