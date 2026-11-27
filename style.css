@@ -170,7 +170,7 @@ details p { margin: 10px 0 0; color: var(--stone); }
 
 .floater-tl,
 .floater-br {
-    --png-w: 50vw;             /* phones */
+    --png-w: 38vw;             /* phones */
     width: var(--png-w);
 }
 
@@ -191,7 +191,7 @@ details p { margin: 10px 0 0; color: var(--stone); }
 /* Computer: the sidebar is visible, so start the top-left photo just beyond it */
 @media (min-width: 801px) {
     .floater-tl,
-    .floater-br { --png-w: 20vw; }
+    .floater-br { --png-w: 38vw; }
     
     .floater-tl {
         top: 20px;
@@ -203,7 +203,7 @@ details p { margin: 10px 0 0; color: var(--stone); }
 @media (min-width: 1200px) {
     .corner { width: clamp(140px, 14vw, 260px); padding: 8px; }
     .floater-tl,
-    .floater-br { --png-w: 22vw; }
+    .floater-br { --png-w: 40vw; }
     
     .floater-br { right: 3vw; }
 }
