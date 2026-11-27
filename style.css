@@ -200,7 +200,7 @@ details p { margin: 10px 0 0; color: var(--stone); }
         left: calc(var(--sidebar-w) + 20px);
     }
     .floater-tl {
-        bottom: 10vh;
+        bottom: 5vh;
     }
 }
 
