@@ -89,11 +89,11 @@ tick();
     document.body.appendChild(badge);
 
     // The same conditions your CSS uses, so the label matches what the CSS is doing
-    const landscapePhone = window.matchMedia("(orientation: landscape) and (max-height: 500px)");
-    const computer = window.matchMedia("(min-width: 801px) and (min-height: 501px)");
+    const landscapePhone = window.matchMedia("(orientation: landscape)");
+    const computer = window.matchMedia("(min-width: 801px)");
 
     function update() {
-        let mode = "phone portrait (base rules)";
+        let mode = "phone portrait";
         if (computer.matches) mode = "computer";
         if (landscapePhone.matches) mode = "phone landscape";   // wins, like it would in CSS
 
