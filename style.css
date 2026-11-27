@@ -154,8 +154,8 @@ details p { margin: 10px 0 0; color: var(--stone); }
     padding: 5px;
     background: #fff;
 }
-.floater-1 { top: 14vh; right: 36px; transform: rotate(4deg); }
-.floater-2 { bottom: 10vh; right: 36px; transform: rotate(-3deg); }
+.floater-1 { top: 14vh; right: 60px; transform: rotate(4deg); }
+.floater-2 { bottom: 10vh; right: 60px; transform: rotate(-3deg); }
 
 /* Wide screens: bigger photos, sitting in the empty margin to the right of the text */
 @media (min-width: 1200px) {
@@ -191,7 +191,7 @@ details p { margin: 10px 0 0; color: var(--stone); }
 /* Computer: the sidebar is visible, so start the top-left photo just beyond it */
 @media (min-width: 801px) {
     .floater-tl,
-    .floater-br { --png-w: 38vw; }
+    .floater-br { --png-w: 50vw; }
     
     .floater-tl {
         top: 20px;
@@ -203,7 +203,7 @@ details p { margin: 10px 0 0; color: var(--stone); }
 @media (min-width: 1200px) {
     .corner { width: clamp(140px, 14vw, 260px); padding: 8px; }
     .floater-tl,
-    .floater-br { --png-w: 40vw; }
+    .floater-br { --png-w: 50vw; }
     
     .floater-br { right: 3vw; }
 }
