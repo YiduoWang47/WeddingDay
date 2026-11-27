@@ -147,21 +147,42 @@ details p { margin: 10px 0 0; color: var(--stone); }
 
 .floater {
     position: absolute;
-    right: 12px;
     width: 84px;
     aspect-ratio: 3 / 4;
     object-fit: cover;
     padding: 5px;
     background: #fff;
 }
-.floater-tf { top: 14vh; transform: rotate(4deg); }
-.floater-br { bottom: 10vh; transform: rotate(-3deg); }
 
-/* Wide screens: bigger photos, sitting in the empty margin to the right of the text */
+/* Top left: no rotation. On mobile it sits beside the menu button */
+.floater-tf {
+    top: 14px;
+    left: 70px;
+    transform: none;
+}
+
+/* Bottom right (unchanged, still tilted) */
+.floater-br {
+    right: 12px;
+    bottom: 10vh;
+    transform: none;
+}
+
+.floater-1 { top: 14vh; transform: rotate(4deg); }
+.floater-2 { bottom: 10vh; transform: rotate(-3deg); }
+
+/* Computer: the sidebar is visible, so start the top-left photo just beyond it */
+@media (min-width: 801px) {
+    .floater-tf {
+        top: 20px;
+        left: calc(var(--sidebar-w) + 20px);
+    }
+}
+
+/* Wide screens: bigger photos */
 @media (min-width: 1200px) {
     .floater { width: clamp(140px, 14vw, 260px); padding: 8px; }
-    .floater-tf { right: 3vw; }
-    .floater-br { right: 6vw; }
+    .floater-br { right: 3vw; }
 }
 
 
