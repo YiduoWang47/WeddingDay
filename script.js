@@ -77,3 +77,32 @@ function tick() {
     }
 }
 tick();
+
+// ---- TEMPORARY: size readout for experimenting. Delete this whole block when done. ----
+(function () {
+    const badge = document.createElement("div");
+    badge.style.cssText =
+        "position:fixed; bottom:8px; left:50%; transform:translateX(-50%);" +
+        "padding:6px 12px; border-radius:6px; background:rgba(0,0,0,0.75);" +
+        "color:#fff; font:13px/1.4 monospace; z-index:99999; pointer-events:none;" +
+        "white-space:nowrap;";
+    document.body.appendChild(badge);
+
+    // The same conditions your CSS uses, so the label matches what the CSS is doing
+    const landscapePhone = window.matchMedia("(orientation: landscape) and (max-height: 500px)");
+    const computer = window.matchMedia("(min-width: 801px) and (min-height: 501px)");
+
+    function update() {
+        let mode = "phone portrait (base rules)";
+        if (computer.matches) mode = "computer";
+        if (landscapePhone.matches) mode = "phone landscape";   // wins, like it would in CSS
+
+        const orientation = window.innerHeight >= window.innerWidth ? "portrait" : "landscape";
+        badge.textContent =
+            `${window.innerWidth} x ${window.innerHeight}px | ${orientation} | ${mode}`;
+    }
+
+    update();
+    window.addEventListener("resize", update);
+    window.addEventListener("orientationchange", update);
+})();

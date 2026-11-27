@@ -189,7 +189,7 @@ details p { margin: 10px 0 0; color: var(--stone); }
 }
 
 .floater-1 { 
-    top: 14vh; 
+    top: 8vh; 
     right: 36px; 
     transform: rotate(4deg); 
 }
