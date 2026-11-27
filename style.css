@@ -174,7 +174,7 @@ h3 {
 
 details { border-bottom: 1px solid rgba(36, 59, 47, 0.2); padding: 14px 0; }
 summary { cursor: pointer; font-weight: 500; }
-details p { margin: 10px 0 0; color: var(--stone); }
+details p { margin: 10px 0 0; color: var(--burgundy); }
 
 
 /* ---------- Floating photos (fixed: they don't move when scrolling) ---------- */
