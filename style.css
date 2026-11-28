@@ -335,24 +335,29 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
 
 /* Computer, portrait */
 @media (orientation: portrait) and (min-width: 801px) {
+    .floater-1 { 
+        top: 10vh; 
+        right: 5vw; 
+    }
     .floater-2 { 
+        top: 20vh; 
         right: 5vw; 
     }    
     .floater-3 { 
+        top: 30vh; 
         right: 5vw; 
     }
     .floater-4 { 
-        right: 10vw; 
+        bottom: 28vh; 
+        right: 5vw; 
     }    
     .floater-5 { 
-        right: 10vw; 
-    }
-    .floater-1 { 
-        right: 5vw; 
+        bottom: 23vh; 
+        right: 3vw; 
     }
     .floater-6 { 
         bottom: 18vh; 
-        right: 10vw; 
+        right: 5vw; 
     }    
     section{max-width: 60vw; }
 }
