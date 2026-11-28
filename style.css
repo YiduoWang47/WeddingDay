@@ -245,6 +245,14 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
         --png-w: 20vw;             /* phones */
         width: var(--png-w);
     }
+
+    .hero {
+        min-height: auto;        /* stop forcing 80% of a short screen */
+        padding-top: 60px;       /* guaranteed space above the title */
+        padding-bottom: 24px;
+    }
+
+    section {max-width: 60vw; }
 }
 
 /* Computer: the sidebar is visible, so start the top-left photo just beyond it */
