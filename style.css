@@ -267,7 +267,7 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
         bottom: 5vh;
     }
 
-    section{max-width: 50vw}
+    section{max-width: 50vw; }
 }
 
 /* ---------- Mobile: sidebar slides out from the left ---------- */
