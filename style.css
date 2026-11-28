@@ -209,19 +209,6 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
     transform: rotate(-3deg); 
 }
 
-/* Wide screens: bigger photos, sitting in the empty margin to the right of the text */
-@media (min-width: 801px) {
-    .floater { width: clamp(140px, 14vw, 260px); padding: 8px; }
-    
-    .floater-1 { 
-        right: 15vw; 
-    }
-    .floater-2 { 
-        bottom: 15vh; 
-        right: 20vw; 
-    }
-}
-
 /* floral corners */
 .corner {
     position: absolute;
@@ -247,8 +234,24 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
     transform: none;
 }
 
+
+/* Phone landscape */
+@media (orientation: landscape){
+
+}
+
 /* Computer: the sidebar is visible, so start the top-left photo just beyond it */
 @media (min-width: 801px) {
+    .floater { width: clamp(140px, 14vw, 420px); padding: 8px; }
+    
+    .floater-1 { 
+        right: 15vw; 
+    }
+    .floater-2 { 
+        bottom: 15vh; 
+        right: 20vw; 
+    }
+
     .corner-tl,
     .corner-br { --png-w: 25vw; }
     
@@ -266,6 +269,7 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
 .nav-toggle { display: none; }
 
 @media (max-width: 800px) {
+    .floater-tf { display: none; }
     .main { margin-left: 0; }
     section { scroll-margin-top: 64px; padding: 56px 24px; }
     .hero { padding: 0 24px; }
