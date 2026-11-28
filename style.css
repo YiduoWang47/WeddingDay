@@ -278,7 +278,7 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
 }
 
 /* Computer, portrait */
-@media (orientation: portrait) and (min-height: 501px) {
+@media (orientation: portrait) and (min-width: 801px) {
     .floater-1 { 
         right: 5vw; 
     }
@@ -349,7 +349,7 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
 }
 
 /* Phone landscape */
-@media (orientation: landscape) and (max-height: 500px) {
+@media (orientation: landscape) and (max-width: 800px) {
     .corner-tl,
     .corner-br {
         --png-w: 20vw;             /* phones */
