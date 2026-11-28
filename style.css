@@ -36,7 +36,7 @@
     --pinkmist: rgb(245, 225, 234);
     --burgundy: rgb(75, 13, 36);
     --gold: rgb(247, 204, 131);
-    --sidebar-w: 15vw;
+    --sidebar-w: clamp(260px, 15vw, 450px);
     --jump-gap: 5vw;
 }
 
@@ -280,11 +280,11 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
 /* Computer, portrait */
 @media (orientation: portrait) and (min-height: 501px) {
     .floater-1 { 
-        right: 10vw; 
+        right: 5vw; 
     }
     .floater-2 { 
         bottom: 18vh; 
-        right: 15vw; 
+        right: 10vw; 
     }    
     section{max-width: 60vw; }
 }
