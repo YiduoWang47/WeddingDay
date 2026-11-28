@@ -92,6 +92,11 @@ h1, h2, .sidebar-title {
 
 .sidebar ul { list-style: none; margin: 0; padding: 0; }
 
+.sidebar a.sidebar-title {
+    border-bottom: none;
+    padding: 0;
+}
+
 .sidebar a {
     display: block;
     padding: 9px 0;
