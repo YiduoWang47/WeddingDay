@@ -119,7 +119,9 @@ h1, h2, .sidebar-title {
 
 /* ---------- Main content ---------- */
 
-.main { margin-left: var(--sidebar-w); }
+.main { 
+    margin-left: var(--sidebar-w); 
+}
 
 .hero {
     min-height: 80vh;
@@ -299,7 +301,10 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
 
 @media (max-width: 800px) {
     .corner-tl { display: none; }
-    .main { margin-left: 0; }
+    .main { 
+        margin-left: 0; 
+        padding-bottom: 120px;
+    }
     section { scroll-margin-top: 64px; padding: 56px 24px; }
     .hero { padding: 0 24px; }
     h2 { font-size: 46px; }
