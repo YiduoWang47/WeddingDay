@@ -225,11 +225,6 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
     pointer-events: auto; 
 }
 
-.floater-1 { 
-    top: 8vh; 
-    right: 36px; 
-    transform: rotate(4deg); 
-}
 .floater-2 {
     top: 28vh; 
     right: 36px; 
@@ -249,6 +244,11 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
     bottom: 36vh; 
     right: 36px; 
     transform: rotate(1deg); 
+}
+.floater-1 { 
+    top: 8vh; 
+    right: 36px; 
+    transform: rotate(4deg); 
 }
 .floater-6 {
     bottom: 20vh; 
