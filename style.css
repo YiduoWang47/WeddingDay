@@ -227,10 +227,38 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
     transform: rotate(4deg); 
 }
 .floater-2 {
+    top: 28vh; 
+    right: 36px; 
+    transform: rotate(-5deg); 
+}
+.floater-3 { 
+    top: 40vh; 
+    right: 36px; 
+    transform: rotate(2deg); 
+}
+.floater-4 {
+    bottom: 45vh; 
+    right: 36px; 
+    transform: rotate(5deg); 
+}
+.floater-5 { 
+    bottom: 36vh; 
+    right: 36px; 
+    transform: rotate(1deg); 
+}
+.floater-6 {
     bottom: 20vh; 
     right: 36px; 
     transform: rotate(-3deg); 
 }
+
+@media (hover: hover) {
+    .floater:hover {
+        z-index: 50;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
+}
+
 
 /* floral corners */
 .corner {
@@ -266,6 +294,19 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
         right: 15vw; 
     }
     .floater-2 { 
+        right: 15vw; 
+    }
+    .floater-3 { 
+        right: 15vw; 
+    }
+    .floater-4 { 
+        right: 20vw; 
+    }
+    .floater-5 { 
+        bottom: 30vh; 
+        right: 15vw; 
+    }
+    .floater-6 { 
         bottom: 15vh; 
         right: 20vw; 
     }
@@ -290,6 +331,18 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
         right: 5vw; 
     }
     .floater-2 { 
+        right: 5vw; 
+    }    
+    .floater-3 { 
+        right: 5vw; 
+    }
+    .floater-4 { 
+        right: 10vw; 
+    }    
+    .floater-5 { 
+        right: 10vw; 
+    }
+    .floater-6 { 
         bottom: 18vh; 
         right: 10vw; 
     }    
