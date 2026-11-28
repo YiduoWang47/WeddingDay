@@ -248,7 +248,7 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
 
 /* Computer: the sidebar is visible, so start the top-left photo just beyond it */
 @media (min-width: 801px) {
-    .floater { width: clamp(140px, 14vw, 420px); padding: 8px; }
+    .floater { width: clamp(140px, 14vw, 320px); padding: 8px; }
     
     .floater-1 { 
         right: 15vw; 
