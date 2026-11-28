@@ -84,7 +84,7 @@ const polaroids = document.querySelectorAll(".polaroid");
 document.addEventListener("pointerdown", (e) => {
     if (e.pointerType !== "touch") return;       // mouse users already get the hover effect
 
-    const tapped = e.target.closest(".polaroid");   // null if the tap landed elsewhere
+    const tapped = e.target.closest(".floater");   // null if the tap landed elsewhere
     polaroids.forEach((p) => p.classList.toggle("is-front", p === tapped));
 });
 

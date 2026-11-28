@@ -263,7 +263,7 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
     }
 }
 
-.polaroid.is-front {
+.floater.is-front {
     z-index: 50;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
@@ -298,9 +298,6 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
 @media (min-width: 801px) {
     .floater { width: clamp(140px, 14vw, 320px); padding: 8px; }
     
-    .floater-1 { 
-        right: 15vw; 
-    }
     .floater-2 { 
         right: 15vw; 
     }
@@ -312,6 +309,9 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
     }
     .floater-5 { 
         bottom: 30vh; 
+        right: 15vw; 
+    }
+    .floater-1 { 
         right: 15vw; 
     }
     .floater-6 { 
@@ -335,9 +335,6 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
 
 /* Computer, portrait */
 @media (orientation: portrait) and (min-width: 801px) {
-    .floater-1 { 
-        right: 5vw; 
-    }
     .floater-2 { 
         right: 5vw; 
     }    
@@ -349,6 +346,9 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
     }    
     .floater-5 { 
         right: 10vw; 
+    }
+    .floater-1 { 
+        right: 5vw; 
     }
     .floater-6 { 
         bottom: 18vh; 
