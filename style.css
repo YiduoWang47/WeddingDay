@@ -226,22 +226,22 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
 }
 
 .floater-2 {
-    top: 28vh; 
+    top: 12vh; 
     right: 36px; 
     transform: rotate(-5deg); 
 }
 .floater-3 { 
-    top: 40vh; 
+    top: 16vh; 
     right: 36px; 
     transform: rotate(2deg); 
 }
 .floater-4 {
-    bottom: 45vh; 
+    bottom: 24vh; 
     right: 36px; 
     transform: rotate(5deg); 
 }
 .floater-5 { 
-    bottom: 36vh; 
+    bottom: 22vh; 
     right: 36px; 
     transform: rotate(1deg); 
 }
