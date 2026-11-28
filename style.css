@@ -64,7 +64,7 @@ h1, h2, .sidebar-title {
 
 .page-end {
     height: 50vh;
-    background: #fff;
+    background: var(--pinkmist);
 }
 
 :focus-visible { outline: 2px solid var(--burgundy); outline-offset: 3px; }
