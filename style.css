@@ -219,6 +219,10 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
     object-fit: cover;
     padding: 5px;
     background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+/*    transform: rotate(var(--rot, 0deg));
+    transition: transform 0.25s ease, box-shadow 0.25s ease;*/
+    pointer-events: auto; 
 }
 
 .floater-1 { 
