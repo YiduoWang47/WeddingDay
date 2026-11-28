@@ -277,6 +277,18 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
     section{max-width: 54vw; }
 }
 
+/* Computer, portrait */
+@media (orientation: portrait) and (min-height: 501px) {
+    .floater-1 { 
+        right: 10vw; 
+    }
+    .floater-2 { 
+        bottom: 18vh; 
+        right: 15vw; 
+    }    
+    section{max-width: 60vw; }
+}
+
 @media (min-width: 1920px) {
     html {font-size: 120%}
 }
