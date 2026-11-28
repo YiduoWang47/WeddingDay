@@ -238,23 +238,6 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
 }
 
 
-/* Phone landscape */
-@media (orientation: landscape) and (max-height: 500px) {
-    .corner-tl,
-    .corner-br {
-        --png-w: 20vw;             /* phones */
-        width: var(--png-w);
-    }
-
-    .hero {
-        min-height: auto;        /* stop forcing 80% of a short screen */
-        padding-top: 60px;       /* guaranteed space above the title */
-        padding-bottom: 24px;
-    }
-
-    section {max-width: 60vw; }
-}
-
 /* Computer: the sidebar is visible, so start the top-left photo just beyond it */
 @media (min-width: 801px) {
     .floater { width: clamp(140px, 14vw, 420px); padding: 8px; }
@@ -338,6 +321,23 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
     .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
     .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+
+/* Phone landscape */
+@media (orientation: landscape) and (max-height: 500px) {
+    .corner-tl,
+    .corner-br {
+        --png-w: 20vw;             /* phones */
+        width: var(--png-w);
+    }
+
+    .hero {
+        min-height: auto;        /* stop forcing 80% of a short screen */
+        padding-top: 60px;       /* guaranteed space above the title */
+        padding-bottom: 24px;
+    }
+
+    section {max-width: 60vw; }
 }
 
 @media (prefers-reduced-motion: reduce) {
