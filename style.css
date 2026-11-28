@@ -36,7 +36,7 @@
     --pinkmist: rgb(245, 225, 234);
     --burgundy: rgb(75, 13, 36);
     --gold: rgb(247, 204, 131);
-    --sidebar-w: min(350px, 15vw);
+    --sidebar-w: max(350px, 15vw);
     --jump-gap: 5vw;
 }
 
