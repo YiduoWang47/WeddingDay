@@ -79,13 +79,13 @@ function tick() {
 tick();
 
 // ---- Polaroids: tap to bring one to the front (touch screens only) ----
-const polaroids = document.querySelectorAll(".polaroid");
+const floaters = document.querySelectorAll(".floater");
 
 document.addEventListener("pointerdown", (e) => {
     if (e.pointerType !== "touch") return;       // mouse users already get the hover effect
 
     const tapped = e.target.closest(".floater");   // null if the tap landed elsewhere
-    floater.forEach((p) => p.classList.toggle("is-front", p === tapped));
+    floaters.forEach((p) => p.classList.toggle("is-front", p === tapped));
 });
 
 // // ---- TEMPORARY: size readout for experimenting. Delete this whole block when done. ----
