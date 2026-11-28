@@ -204,7 +204,7 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
     transform: rotate(4deg); 
 }
 .floater-2 {
-    bottom: 15vh; 
+    bottom: 20vh; 
     right: 36px; 
     transform: rotate(-3deg); 
 }
@@ -236,8 +236,12 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
 
 
 /* Phone landscape */
-@media (orientation: landscape){
-
+@media (orientation: landscape) and (max-height: 500px) {
+    .corner-tl,
+    .corner-br {
+        --png-w: 20vw;             /* phones */
+        width: var(--png-w);
+    }
 }
 
 /* Computer: the sidebar is visible, so start the top-left photo just beyond it */
@@ -262,6 +266,8 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
     .corner-br {
         bottom: 5vh;
     }
+
+    section{max-width: 50vw}
 }
 
 /* ---------- Mobile: sidebar slides out from the left ---------- */
@@ -269,7 +275,7 @@ details p { margin: 10px 0 0; color: var(--burgundy); }
 .nav-toggle { display: none; }
 
 @media (max-width: 800px) {
-    .floater-tf { display: none; }
+    .corner-tl { display: none; }
     .main { margin-left: 0; }
     section { scroll-margin-top: 64px; padding: 56px 24px; }
     .hero { padding: 0 24px; }
